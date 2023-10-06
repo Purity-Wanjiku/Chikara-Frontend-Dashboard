@@ -26,7 +26,7 @@ const LandingPage= () => {
       </nav>
       <div>
       <Image
-            className="mt-4 ml-0 w-[200vh] h-[89.4vh]"
+            className="mt-4 ml-0 w-[200vh] h-[87.4vh]"
             src="/assets/Back.png"
             alt="logo"
             width={400}
