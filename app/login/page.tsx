@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 const LoginPage: React.FC = () => {
-  const router=useRouter();
+  const router = useRouter();
   const [credentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -44,19 +44,19 @@ const LoginPage: React.FC = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className=" w-full h-screen flex flex-col sm:flex-row">
-      <div className="sm:flex w-3/4 relative flex items-center justify-center">
-        <div className=" inset-0">
+    <div className="w-full h-screen flex flex-col sm:flex-row">
+      <div className="sm:flex w-full relative flex items-center justify-center">
+        <div className="inset-0">
           <Image
-          width={800}
-          height={400}
+            width={4000}
+            height={2000}
             src="/Assets/backgrounds.png"
             alt="Background"
-            className="w-full h-full object-cover"
+            className="w-full h-screen object-cover"
           />
         </div>
       </div>
-      <div className="w-full sm:w-1/2 bg-[#F5F5F5] flex flex-col items-center justify-center p-4 sm:p-20 px-4 text-center sm:text-left mr-40">
+      <div className="w-full sm:w-1/2 bg-[#F5F5F5] flex flex-col items-center justify-center p-4 sm:p-20 px-4 text-center sm:text-left ml-32">
         <h1 className={`mt-8 ml-8 mr-0 mb-4 sm:mb-8 text-2xl sm:text-4xl font-poppins text-black font-extrabold`}>
           Welcome Back
         </h1>
@@ -70,7 +70,7 @@ const LoginPage: React.FC = () => {
             name="email"
             value={credentials.email}
             onChange={handleInputChange}
-            className="h-14 px-20 rounded-2xl border-2 border-blue-200 bg-white"
+            className="h-16 mt-4 px-40 rounded-[12px] border-2 border-blue-200 bg-white"
           />
         </div>
         <div>
@@ -84,7 +84,7 @@ const LoginPage: React.FC = () => {
               name="password"
               value={credentials.password}
               onChange={handleInputChange}
-              className="h-14 px-20 rounded-2xl border-2 border-blue-200 bg-white"
+              className="h-16 mt-4 px-40 rounded-[12px] border-2 border-blue-200 bg-white"
             />
             <button
               type="button"
@@ -96,16 +96,16 @@ const LoginPage: React.FC = () => {
           </div>
         </div>
         <Link href="/emissionChart">
-        <button onClick={handleSubmit } className="mt-8 bg-[#0C8283] text-white py-2 rounded-lg w-[228px] h-[45px] hover:bg-opacity-60 focus:outline-none focus:bg-opacity-80 text-lg font-Poppins font-normal -ml-12 " >
-           Login
-        </button>
+          <button onClick={handleSubmit} className="mt-8 bg-[#0C8283] text-white py-2 rounded-lg w-[228px] h-[45px] hover:bg-opacity-60 focus:outline-none focus:bg-opacity-80 text-lg font-Poppins font-normal -ml-12 " >
+            Login
+          </button>
         </Link>
         {response && (
           <div className="mt-4 text-teal-500 font-Poppins text-lg">{response}</div>
         )}
         <p className={`mt-8 -mr-8 text-gray-400 text-center font-Poppins text-lg -ml-28 label`}>
-         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        Don't have an account? <a href="/signup" className={`text-teal-300 font-bold label`}>Sign Up</a>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          Don't have an account? <a href="/signup" className={`text-teal-300 font-bold label`}>Sign Up</a>
         </p>
         <ToastContainer position="top-right" autoClose={3000} />
       </div>

@@ -28,7 +28,7 @@ const Profile = ({ params: { id } }: { params: { id: number } }) => {
                 <Image
                 width={150}
                 height={150}
-                src={userData.image}
+                src="/images/toyotaa.png"
                 alt="company logo"
                   className="w-60 h-auto rounded-md ml-44 mt-7 lg:mb-10"
                 />
@@ -42,7 +42,7 @@ const Profile = ({ params: { id } }: { params: { id: number } }) => {
               <Image
                 width={400}
                 height={150}
-                src={userData.home_image}
+                src="/images/Toyota-Kenya.jpeg"
                 alt="company photo"
                 className="w-full rounded-md border-2 border-teal-500"
                 />
